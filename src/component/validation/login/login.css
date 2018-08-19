@@ -1,0 +1,9 @@
+.res-login {
+    width: 450px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #58B5B1;
+}

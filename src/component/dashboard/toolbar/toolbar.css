@@ -1,0 +1,86 @@
+.res_toolbar {
+    width: 100%;
+    height: 60px;
+    background-color: #58B5B1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.res_toolbar div:nth-child(1) {
+    margin-top: 13px;
+}
+
+.res_toolbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    text-align: center;
+}
+
+.res_toolbar ul li {
+    padding-top: 15px;
+    text-align: center;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+}
+
+.res_toolbar ul li:hover  {
+    border-bottom: 5px solid black;
+}
+
+.res_toolbar ul li .item-to-hide {
+    visibility: visible;
+
+}
+
+.res_toolbar ul li:hover,
+.res_toolbar ul li:active {
+    /* border-bottom: 5px solid black; */
+    cursor: pointer;
+}
+
+.res_toolbar a {
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+
+.res_toolbar .active {
+    color: red;
+}
+
+.res_toolbar input:focus {
+    -webkit-box-shadow: -1px -1px 10px 2px rgba(0,0,0,1);
+    -moz-box-shadow: -1px -1px 10px 2px rgba(0,0,0,1);
+    box-shadow: -1px -1px 10px 2px rgba(0,0,0,1);
+}
+
+@media all and (max-width: 540px) {    
+    .item-to-hide {
+        visibility: hidden;
+    } 
+}
+
+@media all and (max-width: 720px) {
+
+}
+
+@media all and (max-width: 960px) {
+
+}
+
+@media all and (max-width: 1200px) {
+
+}
+
+@media all and (max-width: 1400px) {
+
+}

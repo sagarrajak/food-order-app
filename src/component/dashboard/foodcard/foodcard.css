@@ -1,0 +1,137 @@
+.res_food_block {
+    width: 50%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding: 2px;
+    /* border: 1px solid black; */
+}
+
+.res_card {
+    background-color: #58B5B1;
+    min-height: 200px;
+    width: 100%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.res_card:hover {
+    background-color: #28918c;
+}
+
+.res_card img {
+    width: 100%;
+    height: 100px;
+    margin: 2px;
+    /* border: 2px solid #B99F5F; */
+    border-radius: 5px;
+}
+
+.res_card img:hover {
+    cursor: pointer;
+}
+
+.res_card .alert {
+    width: 100%;
+    /* background-color: #B99F5F; */
+    margin-top:2px;
+    margin-bottom: 2px;
+    color: black;
+    text-align: center;
+}
+
+.alert > h4 {
+    font-size: 1rem;
+}
+
+.res_card .res_footer {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.res_footer .btn {
+    width: 20%;
+    background-color:black;
+    color:#B99F5F;
+}
+
+.res_footer  h4 {
+    font-size: 0.8rem;
+}
+
+.res_footer div:nth-child(2) {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    background-color: #B99F5F;
+}
+
+
+@media only screen and (min-width: 540px) {
+    .res_food_block {
+        width: 50%;
+        padding: 5px 5%;
+    } 
+    
+    .res_card .res_footer {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .res_food_block {
+        width: 33.3%;
+        padding: 5px 20px;
+    }
+    
+    .res_food_block {
+        min-height: 250px;
+    }
+
+    .res_card img {
+        height: 150px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .res_food_block {
+        width: 25%;
+        padding: 5px 20px ;
+    }
+
+    .res_card img {
+        height: 200px;
+    }
+
+    .res_food_block {
+        min-height: 300px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .res_food_block {
+        width: 20%;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .res_food_block {
+        width: 16.6%;
+        padding: 5px 20px;
+    }
+}
+

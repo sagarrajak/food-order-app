@@ -1,0 +1,88 @@
+.res_flex_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.res_modal {
+    top: 40px;
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+    position: fixed;
+    background-color: white;
+    z-index: 200;
+    transition: 100ms linear;
+}
+
+.res_modalclose {
+    top: -1000px;
+}
+
+/* Mobile first approach */
+@media all and (min-width: 540px) {
+    .res_modal {
+        top: 40px;
+        width: 95%;
+        height: 90%;
+        transition: 100ms ease-in-out;
+    }
+
+    .res_modalclose {
+        top: -1000px;
+    }    
+}
+
+@media all and (min-width: 720px) {
+    .res_modal {
+        top: 40px;
+        width: 95%;
+        height: 90%;
+        transition: 100ms ease-in-out;
+    }
+
+    .res_modalclose {
+        top: -1000px;
+    }    
+}
+
+@media all and (min-width: 960px) {
+    .res_modal {
+        top: 40px;
+        width: 80%;
+        height: 80%;
+        transition: 100ms ease-in-out;
+    }
+
+    .res_modalclose {
+        top: -1000px;
+    }    
+}
+
+@media all and (min-width: 1200px) {
+    .res_modal {
+        top: 40px;
+        width: 70%;
+        height: 80%;
+        transition: 100ms ease-in-out;
+    }
+
+    .res_modalclose {
+        top: -1000px;
+    }    
+}
+
+@media all and (min-width: 1400px) {
+    .res_modal {
+        top: 40px;
+        width: 60%;
+        height: 80%;
+        transition: 100ms ease-in-out;
+    }
+    
+    .res_modalclose {
+        top: -1000px;
+    }    
+}

@@ -1,0 +1,32 @@
+.rs_container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+}
+.res_link ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.res_link li {
+    display: inline-block;
+    margin: 20px;
+}
+.res_link a{
+    text-decoration: none;
+    color: green;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.res_link a:active {
+    color: red;
+}  
+
+.res_link .active {
+    color: red
+}

@@ -1,0 +1,33 @@
+constructor(props) {
+    super(props);
+    this.state = {
+        cls: ''
+    }
+}
+
+onBackdropTouch = (outSideModel) => {
+    if(outSideModel) {
+        this.setState({cls: 'res_modalclose'});
+        setTimeout(() => {
+            this.props.history.push('/app')
+        }, 700); 
+    } else {
+        console.log('you are inside model')
+    }
+}
+
+render() {
+    return (
+        <div>
+            <div onClick={() => this.onBackdropTouch(true)}>
+                <Backdrop>
+                </Backdrop>
+            </div>
+            <div className='res_flex_container'>
+                <div className={'res_modal '+this.state.cls} onClick={() => this.onBackdropTouch(false)}>
+             
+                </div>
+            </div>
+        </div>
+    );
+}

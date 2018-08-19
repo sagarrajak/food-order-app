@@ -1,0 +1,161 @@
+.res-checkout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0.2em;
+    padding-top: 0.5em;
+    border-radius: 10px;
+}
+
+.res-checkout .res-table {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    position: relative;
+    background-color: #B99F5F;
+    overflow-y: scroll;
+}
+
+.res-checkout .res-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+.res-checkout .res-header-title {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+}
+
+.res-checkout .res-value {
+    padding: 12px 20px;
+    width: 98%;
+    height: 60px;
+    position: relative;
+    background-color: aqua;
+    left:0.5%;
+    margin: 2px;
+    border-radius: 0.2em;
+    border: 1px solid rgba(0,0, 0, 0.2);
+    transition: 100ms ease-in-out;
+    overflow: hidden;
+}
+
+.res-checkout .res-value:hover  {
+    cursor: pointer;
+}
+
+.res-checkout .res-expanded {
+    height: 170px;
+}
+
+.res-checkout .res-value-item {
+    font-size: 0.8em;
+    font-weight: 550;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: black;
+}
+
+.res-checkout .res-value-title {
+    font-size: 0.9em;
+    font-weight: 550;
+    color: black;
+}
+
+.res-checkout .res-value-container {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.res-checkout .res-button-container {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.res-checkout .res-button-container div:nth-child(n) {
+    margin-left: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: black;
+}
+
+.res-button-container div:nth-child(n):hover {
+    cursor: pointer;
+    -webkit-box-shadow: -2px 0px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: -2px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+.res-button-container div:nth-child(n):hover {
+    cursor: pointer;
+}
+
+.res-button-container  i {
+    position: relative;
+    left: 19px;
+    top: 14px;
+    align-self: flex-end;
+}
+
+.res-checkout-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    left: calc(98% - 100px);
+    width:  100px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+}
+
+.res-checkout-footer .res-footer-title {
+    font-size: 0.8em;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 550;
+    color: white;
+}
+
+@media all and (max-width: 540px) {
+  
+}
+
+@media all and (max-width: 720px) {
+
+}
+
+@media all and (max-width: 960px) {
+
+}
+
+@media all and (max-width: 1200px) {
+
+}
+
+@media all and (max-width: 1400px) {
+
+}
+

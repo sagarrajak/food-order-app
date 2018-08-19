@@ -1,0 +1,10 @@
+.res-signup {
+    margin-top: 2%;
+    width: 600px;
+    height: 650px;
+    box-sizing: border-box;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #58B5B1;
+}

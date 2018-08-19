@@ -1,0 +1,122 @@
+.res_backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.res_sidenav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.res_toggle {
+    display: 'hidden';
+}
+
+.res_sidenav ul li:nth-child(1) {
+    padding: 0;
+    margin: 0;
+    background-color: #B99F5F;
+}
+
+.res_sidenav ul li img {
+    width: 200px;
+    height: 200px;
+    background-color: #B99F5F;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.res_sidenav ul li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid black;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+.nav-link {
+    font-size: 0.95em;
+}
+
+.nav-link:hover {
+    background-color: #B99F5F;
+    cursor: pointer;
+}
+
+.res_sidenav a {
+    text-decoration: none;
+    color:black;
+}
+
+.res_sidenav .res-dynamic {
+    display: none;
+    text-align: left;
+    transition: 100ms ease-in-out;;
+ }
+
+.res_sidenav .res-dynamic .res-sidenav-checkout {
+    width: 100%;
+    height: 60px;
+    /* background-color: brown; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+ }
+
+.res-sidenav-checkout .res-sidenav-checkout-item {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 30px;
+    transition: 100ms ease-in-out;
+}
+
+
+.res-sidenav-checkout-item > i {
+    position: relative;
+    left: 14px;
+    top: 14px;
+}
+
+.res-sidenav-checkout-item:hover {
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.52); 
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.52);
+    cursor: pointer;
+}
+
+@media all and (max-width: 540px) {
+    .res_sidenav .res-dynamic {
+        display: block;
+    }
+
+    .res-sidenav-checkout-item:hover {
+        -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.52); 
+        box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.52);
+        cursor: pointer;
+    }
+}
+
+@media all and (max-width: 720px) {
+
+}
+
+@media all and (max-width: 960px) {
+
+}
+
+@media all and (max-width: 1200px) {
+
+}
+
+@media all and (max-width: 1400px) {
+
+}
