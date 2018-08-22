@@ -1,42 +1,42 @@
-.lds-container {
+.ms-container {
+    /* background-color: yellow; */
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: yellow;
 }
 
-.lds-ring {
+.ms-ring {
     display: inline-block;
     position: relative;
     width: 50px;
     height: 50px;
   }
 
-  .lds-ring div {
-    background-color: blanchedalmond;
+  .ms-ring div {
+    /* background-color: blanchedalmond; */
     box-sizing: border-box;
     display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 50px;
+    height: 50px;
     border: 5px solid black;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: black transparent transparent transparent;
   }
 
-  .lds-ring div:nth-child(1) {
+  .ms-ring div:nth-child(1) {
     animation-delay: -0.45s;
   }
 
-  .lds-ring div:nth-child(2) {
+  .ms-ring div:nth-child(2) {
     animation-delay: -0.3s;
   }
 
-  .lds-ring div:nth-child(3) {
+  .ms-ring div:nth-child(3) {
     animation-delay: -0.15s;
   }
   
@@ -49,31 +49,3 @@
     }
   }
   
-@media only screen and (min-width: 320px) {
-    .lds-ring {
-        width: 100px;
-        height: 100px;
-      }
-}
-
-  
-@media only screen and (min-width: 540px) {
-    .lds-ring {
-        width: 150px;
-        height: 150px;
-      }
-}
-
-@media only screen and (min-width: 720px) {
-    .lds-ring {
-        width: 150px;
-        height: 150px;
-      }
-}
-
-@media only screen and (min-width: 960px) {
-    .lds-ring {
-        width: 200px;
-        height: 200px;  
-    }
-}

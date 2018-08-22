@@ -4,11 +4,10 @@ import * as Actions from '../actions';
 let initState = { nav: true, drop: true } ;
 
 export default (state = initState, action) => {
-    console.log('coming');
     switch(action) {
         case Actions.TOGGLE_SIDENAV:
             return {...state, nav: !state.nav, drop: !state.drop};
         default: 
             return {...state};
-    } 
+    }
 }

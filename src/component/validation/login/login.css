@@ -7,3 +7,19 @@
     border: 1px solid black;
     background-color: #58B5B1;
 }
+
+.res-login .res-spinner {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.res-invalid,
+.res-invalid:focus {
+    border-left: 5px solid red;
+}
+
+.res-valid,
+.res-valid:focus {
+    border-left: 5px solid green;
+}

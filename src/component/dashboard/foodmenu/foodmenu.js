@@ -16,8 +16,8 @@ class FoodMenu extends React.Component {
         return (
             <div>
                 <h4>Title</h4>
-                {/* <Spinner /> */}
-                <div className='res_foodmenu'>
+                <Spinner />
+                {/* <div className='res_foodmenu'>
                     <FoodCard />
                     <FoodCard />
                     <FoodCard />
@@ -30,7 +30,7 @@ class FoodMenu extends React.Component {
                     <FoodCard />
                     <FoodCard />
                     <FoodCard />
-                </div>
+                </div> */}
             </div>
         )
     }

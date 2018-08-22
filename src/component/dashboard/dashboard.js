@@ -7,6 +7,7 @@ import Modal from '../../component/dashboard/modal/modal';
 import FoodMenu from '../dashboard/foodmenu/foodmenu';
 import AboutItem from './aboutitem/aboutitem';
 import Checkout from './Checkout/checkout';
+
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
