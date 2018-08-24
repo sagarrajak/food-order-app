@@ -2,26 +2,21 @@ import React from 'react';
 import './login.css';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setAuthToken } from '../../../redux/action_creator/auth_creator';
 import Spinner  from './../../dashboard/menuSpinner/menuSpinner';
-// import axios from '../../../axios.config';
 import axios from 'axios';
 import validator from 'validator';
-import { stat } from 'fs';
+import { setAuthToken }from '../../../redux/action_creator/auth_creator';
+import { 
+  LABEL_LODING,
+  LABEL_LOGIN_ERROR,
+  LABEL_LOGIN_SUCCESS,
+  LABEL_LOGIN_RESET
+} from '../../../redux/actions';
 
 class Login extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.state = {
-            loading: false,
-            loginError: {
-                message: '',
-                error: false
-            },
-            loginSuccess: {
-                success: false,
-                message: ''
-            },
             form: {
                 email: {
                     field: '',
@@ -36,58 +31,26 @@ class Login extends React.Component {
         }
     }
 
-    resetLoginState = () => {
-        this.setState(preState => ({
-            loginError: {
-                message: '',
-                error: false
-            },
-            loginSuccess: {
-                success: false,
-                message: ''
-            }
-        }));
-    }
-
     loginHandle = (event) => {
         event.preventDefault();
-        this.setState({loading: true});
-        this.resetLoginState();
+        this.props.loginLoadingFlag(true);
+        this.props.loginResetFlag();
         axios.post('http://localhost:8080/api/login', {
                 username: this.state.form.email.field,
                 password: this.state.form.password.field
          })
-        .then((responce) => {
-             this.setState({loading: false});
-             this.setState(preState => ({
-                ...preState,
-                loginSuccess: {
-                    ...preState.loginSuccess,
-                    success: true,
-                    message: 'Successfully login!'
-                }
-             }));       
+        .then((response) => {
+            this.props.loginLoadingFlag(false);
+            this.props.loginSuccessFlag('Successfully login!');
+            this.props.signInUser(response.data.token);
         })
         .catch((e) => {
-            let tem = {
-                ...e,
-                response: {
-                    ...e.response,
-                }
-            };
             this.setState({loading: false});
-            console.log(tem.response);
             let defaultErrorMessage = 'Error during connection!';
-            this.setState(preState => ({
-                ...preState,
-                loginError: {
-                    ...preState.loginError,
-                    message: tem.response.data === undefined ? 
-                            defaultErrorMessage : tem.response.data.message === undefined ? 
-                            defaultErrorMessage : tem.response.data.message,
-                    error: true
-                }
-            }));
+            let message = e.response.data === undefined ?
+                          defaultErrorMessage: e.response.data.message === undefined ?
+                          defaultErrorMessage: e.response.data.message;
+            this.props.loginErrorFlag(message);
         });
     }
 
@@ -134,7 +97,7 @@ class Login extends React.Component {
     }
     
     checkFormValidity = (state) => {
-        this.setState({ formValid: state.form.email.validity&state.form.password.validity });
+        this.setState({formValid: state.form.email.validity&state.form.password.validity});
     }
    
     checkValidity = (fieldName) => {
@@ -156,7 +119,8 @@ class Login extends React.Component {
                             onChange={(event) => this.emailCheck(event)} 
                             />
                             { this.state.form.email.validity !== null 
-                              && !this.state.form.email.validity ? <p style={{'color':'red', 'marginLeft': '10px'}}>Wrong email address</p> : null }
+                              && !this.state.form.email.validity ? <p style={{'color':'red', 'marginLeft': '10px'}}>
+                              Wrong email address</p> : null }
                     </div>
                     <div className="form-group">
                         <label htmlFor='email'>Password:</label>
@@ -169,7 +133,8 @@ class Login extends React.Component {
                             className={"form-control "+this.checkValidity(this.state.form.password.validity)}
                             />
                             { this.state.form.password.validity !== null && 
-                              !this.state.form.password.validity ? <p style={{'color':'red', 'marginLeft': '10px'}}>Password is minimum eight charector long</p> : null }
+                              !this.state.form.password.validity ? <p style={{'color':'red', 'marginLeft': '10px'}}>
+                              Password is minimum eight charector long</p> : null }
                     </div>
                     <button 
                         disabled={!this.state.formValid}
@@ -178,24 +143,31 @@ class Login extends React.Component {
                         onClick={(event) => this.loginHandle(event)}>
                     Submit</button>
                 </form>
-                {this.state.loginError.error ? <div className='alert alert-danger'>{this.state.loginError.message}</div> : null }
-                {this.state.loginSuccess.success && !this.state.loginError.error ? <div className='alert alert-primary'>{this.state.loginSuccess.message}</div> : null }
-                {this.state.loading ? <div><Spinner /></div> : null } 
+                {this.props.loginError.error ? <div className='alert alert-danger'>{this.props.loginError.message}</div> : null }
+                {this.props.loginSuccess.success && !this.props.loginError.error ?
+                     <div className='alert alert-primary'>{this.props.loginSuccess.message}</div> : null }
+                {this.props.loading ? <div><Spinner /></div> : null } 
             </div>
         )
     }
 }
 
-const mapDispatchToProps = state => {
+const mapDispatchToProps = dispatch => {
     return {
-
+        signInUser : (token) => dispatch(setAuthToken(token)),
+        loginLoadingFlag: (isLoading) => dispatch({type: LABEL_LODING, isLoading}),
+        loginErrorFlag: (message) => dispatch({type: LABEL_LOGIN_ERROR, message}),
+        loginSuccessFlag: (message) => dispatch({type: LABEL_LOGIN_SUCCESS, message}),
+        loginResetFlag: () => dispatch({type: LABEL_LOGIN_RESET})
     }
-}
+};
 
-const mapStateToProps = dispatch => {
+const mapStateToProps = state => {
     return {
-
+        loading: state.login.loading,
+        loginError: state.login.loginError,
+        loginSuccess: state.login.loginSuccess
     }
-}
+};
 
 export default  connect(mapStateToProps, mapDispatchToProps)(withRouter(Login)); 

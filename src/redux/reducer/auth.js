@@ -1,4 +1,7 @@
-import { AUTH_SET_TOKEN, AUTH_DISCARD_TOKEN } from '../actions';
+import { 
+    AUTH_SET_TOKEN, 
+    AUTH_DISCARD_TOKEN
+} from '../actions';
 
 export default (state = {}, actions) => {
     switch (actions.type) {
@@ -17,7 +20,6 @@ export default (state = {}, actions) => {
                 isAuthenticated: false,
                 token: null
             }
-
     }
     return {...state};
 }

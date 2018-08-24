@@ -1,13 +1,14 @@
-import * as Actions from '../actions';
+import { AUTH_SET_TOKEN, AUTH_DISCARD_TOKEN, TOGGLE_SIDENAV } from '../actions';
 
-//props to see if sidenav is open or not default is close
 let initState = { nav: true, drop: true } ;
 
 export default (state = initState, action) => {
-    switch(action) {
-        case Actions.TOGGLE_SIDENAV:
+    switch (action.type) {
+        case TOGGLE_SIDENAV:
             return {...state, nav: !state.nav, drop: !state.drop};
+            
         default: 
             return {...state};
+
     }
 }
