@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import uiReducer from './redux/reducer/ui';
 import loginReducer from './redux/reducer/login';
+import signupReducer from './redux/reducer/signup';
 import authReducer from './redux/reducer/auth';
 
 import '../node_modules/font-awesome/css/font-awesome.css';
@@ -14,8 +15,9 @@ import registerServiceWorker from './registerServiceWorker';
 
 const newReducer = combineReducers({
     login: loginReducer,
+    signup: signupReducer, 
     auth: authReducer,
-    ui: uiReducer
+    ui: uiReducer,
 });
 const store = createStore(newReducer);
 ReactDOM.render(  

@@ -28,5 +28,4 @@ class Validation extends React.Component {
         );
     }
 }
-
 export default withRouter(Validation);
