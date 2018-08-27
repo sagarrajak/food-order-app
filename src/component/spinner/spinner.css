@@ -5,7 +5,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: yellow;
 }
 
 .lds-ring {
@@ -16,7 +15,6 @@
   }
 
   .lds-ring div {
-    background-color: blanchedalmond;
     box-sizing: border-box;
     display: block;
     position: absolute;

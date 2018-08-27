@@ -5,14 +5,14 @@ import Input from './input/input';
 import Spinner from '../../dashboard/menuSpinner/menuSpinner';
 import { connect } from 'react-redux';
 import validator from 'validator';
+import axios from 'axios';
+import * as Api from '../../../api';
 
 import {
     LABEL_SIGNUP_RESET,
     LABEL_SIGNUP_ERROR,
     LABEL_SIGNUP_SUCCESS,
     LABEL_SIGNUP_LOADING,
-    LABEL_LODING,
-    LABEL_LOGIN_SUCCESS
 } from '../../../redux/actions';
 
 class Signup extends React.Component {
@@ -109,15 +109,17 @@ class Signup extends React.Component {
                  username: '',
                  phonenumber: '',
                  address: '',
-                 passowrd: '',
+                 password: '',
                  retypePassword: ''
-            }
+            },
+            formValid: false
         }
     }   
 
     submitHandle = (event) => {
         event.preventDefault();
-        let fromValues = this.state.form.map((obj, index) => {
+        this.props.signupResetFlag();
+        let formValues = this.state.form.map((obj, index) => {
             let tem = {};
             let key = Object.keys(this.state.values)[index];
             tem[key] = obj.data;
@@ -128,8 +130,39 @@ class Signup extends React.Component {
             acc[key] = curValue[key];
             return acc;
         }, {})
+        if (formValues.password !== formValues.retypePassword) {
+            this.props.signupErrorFlag('Password not match'); 
+        } 
+        else {
+            this.props.signupLoadingFlag(true);
+            axios.post('http://localhost:8080/api/signup', formValues)
+            .then((response) => {
+                console.log(response);
+                this.props.signupLoadingFlag(false);
+                if (response.status === 200 && response.data && response.data.success) {
+                    this.props.signupSuccessFlag(response.data.message);
+                    setTimeout(() => {
+                        this.props.history.push('/auth/login'); // Set small timeout before going to login page 
+                    }, 500); 
+                } 
+                else if (response.data && response.data.message) {
+                    this.props.signupErrorFlag(response.data.message);
+                } 
+                else {
+                    this.props.signupErrorFlag("Error during signup");
+                }
+            })
+            .catch(err => {
+                this.props.signupLoadingFlag(false);
+                const defaultErrorMessage = 'Error during connection';
+                let message = err.response.data === undefined ?  //If there is error message is response else set default error message
+                              defaultErrorMessage: err.response.data.message ? 
+                              err.response.data.message: defaultErrorMessage;
+                this.props.signupErrorFlag(message); 
+            });
+        }
     }
-    
+
     onChangeHandaler = (event, id) => {
         let index = this.state.form.findIndex((obj) => {
             return obj.id === id;
@@ -139,16 +172,27 @@ class Signup extends React.Component {
             const data = event.target.value;
             let item = [...this.state.form];
             item[index].data = data;
-
             if (item[index].validator) {
                 if (!item[index].validator(data)) {
-                    item[index].validityClass = 'res-invalid'
+                    item[index].validityClass = 'res-invalid';
                 } else {
-                    item[index].validityClass = 'res-valid'
+                    item[index].validityClass = 'res-valid';
                 }
+            } else {
+                item[index].validityClass = 'res-valid';
             }
             this.setState({form: item});
+            this.checkFormValidity(item); // Check form validity each time  after updating form
         }
+    }
+
+    checkFormValidity = (form) => {
+        let formValid = true;
+        form.forEach((obj) => {
+            if(obj.validator) // If validator is defined 
+                formValid &= obj.validator(obj.data) //Check value is correct or not 
+        });
+        this.setState({formValid}); 
     }
 
     render() {
@@ -166,15 +210,18 @@ class Signup extends React.Component {
                                 /> 
                              )
                             }
-                        <div className="btn btn-primary" 
+                        <button className="btn btn-primary" 
                              type='submit' 
+                             disabled={!this.state.formValid}
                              onClick={(event)=>this.submitHandle(event)}>
                              Submit
-                        </div>
+                        </button>
                     </form> 
-                    {/* { <div><Spinner /></div> } */}
-                    {/* { <div className='alert alert-primary'>this is alert message</div> } */}
-                    {/* { <div className='alert alert-danger'>this is alert message</div> } */}
+                    {this.props.signupError.error ? 
+                        <div className='alert alert-danger'>{this.props.signupError.message}</div>: null}
+                    {this.props.signupSuccess.success && !this.props.signupSuccess.error?
+                        <div className='alert alert-primary'>{this.props.signupSuccess.message}</div> : null}
+                    {this.props.loading? <div><Spinner /></div>: null} 
                 </div>
             </div>
         )
@@ -185,8 +232,8 @@ const mapDispatchToProps = dispatch => {
     return {
         signupLoadingFlag: (isLoading) => dispatch({type: LABEL_SIGNUP_LOADING, isLoading}),
         signupErrorFlag: (message) => dispatch({type: LABEL_SIGNUP_ERROR, message}),
-        signupSuccessFlag: (message) => dispatch({dispatch: LABEL_SIGNUP_SUCCESS, message}),
-        signupResetFlag: (message) => dispatch({dispatch: LABEL_SIGNUP_RESET})
+        signupSuccessFlag: (message) => dispatch({type: LABEL_SIGNUP_SUCCESS, message}),
+        signupResetFlag: () => dispatch({type: LABEL_SIGNUP_RESET})
     } 
 }
 

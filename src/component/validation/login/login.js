@@ -41,11 +41,22 @@ class Login extends React.Component {
          })
         .then((response) => {
             this.props.loginLoadingFlag(false);
-            this.props.loginSuccessFlag('Successfully login!');
-            this.props.signInUser(response.data.token);
+            if(response.status === 200 && response.data && response.data.success) {
+                this.props.loginSuccessFlag('Successfully login!');
+                this.props.signInUser(response.data.token);
+                setTimeout(() => {
+                    this.props.history.replace('/app'); // Add delay to show success message
+                }, 200);
+            } 
+            else if (response.data && response.data.message) {
+                this.props.loginErrorFlag(response.data.message);
+            }
+            else {
+                this.props.loginErrorFlag('Error during connection');
+            }
         })
         .catch((e) => {
-            this.setState({loading: false});
+            this.props.loginLoadingFlag(false);
             let defaultErrorMessage = 'Error during connection!';
             let message = e.response.data === undefined ?
                           defaultErrorMessage: e.response.data.message === undefined ?
