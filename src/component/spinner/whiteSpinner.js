@@ -1,5 +1,5 @@
 import React from 'react';
-import './spinner.css'
+import './whiteSpinner.css'
 
 
 const Spinner = (props) => { 

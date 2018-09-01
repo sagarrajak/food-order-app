@@ -10,12 +10,13 @@
 
 .res_card {
     background-color: #58B5B1;
-    min-height: 200px;
+    height: 220px;
     width: 100%;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding: 5px;
 }
 
@@ -25,7 +26,7 @@
 
 .res_card img {
     width: 100%;
-    height: 100px;
+    height: 120px;
     margin: 2px;
     /* border: 2px solid #B99F5F; */
     border-radius: 5px;
@@ -78,16 +79,20 @@
     background-color: #B99F5F;
 }
 
+res_backdrop_spinner {
+    position: static;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+}
 
 @media only screen and (min-width: 540px) {
     .res_food_block {
         width: 50%;
         padding: 5px 5%;
     } 
-    
-    .res_card .res_footer {
-        width: 80%;
-    }
 }
 
 @media only screen and (min-width: 720px) {
@@ -95,14 +100,11 @@
         width: 33.3%;
         padding: 5px 20px;
     }
-    
-    .res_food_block {
-        min-height: 250px;
-    }
 
     .res_card img {
-        height: 150px;
+        height: 120px;
     }
+
 }
 
 @media only screen and (min-width: 960px) {
@@ -111,14 +113,16 @@
         padding: 5px 20px ;
     }
 
+    .res_card .res_footer {
+        width: 80%;
+    }
+    .res_card {
+        height: 250px;
+    }
+
     .res_card img {
-        height: 200px;
+        height: 150px;
     }
-
-    .res_food_block {
-        min-height: 300px;
-    }
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -126,12 +130,30 @@
         width: 20%;
         padding: 10px 20px;
     }
+    .res_card {
+        height: 270px;
+    }
+
+    .res_card img {
+        height: 160px;
+    }
+    .res_card .res_footer {
+        width: 60%;
+    }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1600px) {
     .res_food_block {
         width: 16.6%;
         padding: 5px 20px;
+    }
+
+    .res_card {
+        height: 300px;
+    }
+
+    .res_card img {
+        height: 180px;
     }
 }
 

@@ -20,6 +20,15 @@ class Modal extends React.Component {
         }
     }
 
+    onEscapeHandel = (e) => {
+        if (e.keyCode === 27) {
+            this.setState({cls: 'res_modalclose'});
+            setTimeout(() => {
+                this.props.history.push(this.props.navroute)
+            }, 700); 
+        }
+    }
+
     render() {
         return (
             <div>
@@ -35,6 +44,14 @@ class Modal extends React.Component {
                 </div>
             </div>
         );
+    }
+
+    componentDidMount() {
+        document.addEventListener("keydown", this.onEscapeHandel, false);
+    }
+
+    componentWillUnmount() {
+        document.addEventListener("keydown", this.onEscapeHandel, false);
     }
 }
 

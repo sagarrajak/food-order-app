@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a8ef038-978a-4acf-9b7d-dab93a326a67" name="Default" comment="" />
+    <list default="true" id="0a8ef038-978a-4acf-9b7d-dab93a326a67" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/spinner/whiteSpinner.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/spinner/whiteSpinner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/redux/action_creator/foodcard_creator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/redux/reducer/cart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api.js" afterPath="$PROJECT_DIR$/src/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/axios.config.js" afterPath="$PROJECT_DIR$/src/axios.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dashboard/backdrop/backdrop.css" afterPath="$PROJECT_DIR$/src/component/dashboard/backdrop/backdrop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dashboard/foodcard/foodcard.css" afterPath="$PROJECT_DIR$/src/component/dashboard/foodcard/foodcard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dashboard/foodcard/foodcard.js" afterPath="$PROJECT_DIR$/src/component/dashboard/foodcard/foodcard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dashboard/foodmenu/foodmenu.css" afterPath="$PROJECT_DIR$/src/component/dashboard/foodmenu/foodmenu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dashboard/foodmenu/foodmenu.js" afterPath="$PROJECT_DIR$/src/component/dashboard/foodmenu/foodmenu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dashboard/modal/modal.js" afterPath="$PROJECT_DIR$/src/component/dashboard/modal/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dashboard/toolbar/toolbar.js" afterPath="$PROJECT_DIR$/src/component/dashboard/toolbar/toolbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/spinner/spinner.js" afterPath="$PROJECT_DIR$/src/component/spinner/spinner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions.js" afterPath="$PROJECT_DIR$/src/redux/actions.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,8 +31,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="restaurant" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.38762018">
+    <splitter split-orientation="horizontal" split-proportion="0.46206534">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="build.js" pinned="false" current-in-tab="false">
@@ -29,7 +51,7 @@
           <file leaf-file-name="aboutitem.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/component/dashboard/aboutitem/aboutitem.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
+                <state relative-caret-position="195">
                   <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -41,8 +63,8 @@
           <file leaf-file-name="checkout.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="478">
-                  <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+                <state relative-caret-position="2115">
+                  <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -51,8 +73,8 @@
           <file leaf-file-name="sidenav.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="358">
-                  <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+                <state relative-caret-position="313">
+                  <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -65,7 +87,7 @@
           <file leaf-file-name="aboutitem.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/component/dashboard/aboutitem/aboutitem.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
+                <state relative-caret-position="195">
                   <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -77,9 +99,21 @@
           <file leaf-file-name="checkout.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="464">
-                  <caret line="151" column="32" lean-forward="false" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
-                  <folding />
+                <state relative-caret-position="1740">
+                  <caret line="119" column="32" lean-forward="false" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+                  <folding>
+                    <marker date="1535362018390" expanded="true" signature="175:4793" ph="{...}" />
+                    <marker date="1535362018390" expanded="true" signature="3113:4791" ph="{...}" />
+                    <marker date="1535362018390" expanded="true" signature="3153:4775" ph="&lt;Modal/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="3193:4754" ph="&lt;div/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="3244:4731" ph="&lt;div/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="3463:3750" ph="&lt;div/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="3545:3750" ph="&lt;div/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="3710:3750" ph="&lt;div/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="3742:3750" ph="&lt;i/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="4176:4502" ph="&lt;div/&gt;" />
+                    <marker date="1535362018390" expanded="true" signature="4558:4704" ph="&lt;div/&gt;" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -87,8 +121,8 @@
           <file leaf-file-name="sidenav.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+                <state relative-caret-position="405">
+                  <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -100,14 +134,17 @@
       </split-second>
     </splitter>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/component/dashboard/aboutitem/aboutitem.js" />
         <option value="$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.js" />
         <option value="$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.css" />
-        <option value="$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.js" />
         <option value="$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.css" />
+        <option value="$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.js" />
       </list>
     </option>
   </component>
@@ -201,6 +238,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -226,31 +264,41 @@
       <updated>1533648960747</updated>
       <workItem from="1533648971771" duration="721000" />
       <workItem from="1533999394348" duration="5890000" />
+      <workItem from="1535515153637" duration="68000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6611000" />
+    <option name="totallyTimeSpent" value="6679000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1626" y="40" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12328767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12328767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -294,6 +342,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2115">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/dashboard/aboutitem/aboutitem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2265">
+          <caret line="151" column="32" lean-forward="false" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
+          <folding>
+            <marker date="1535362018390" expanded="true" signature="175:4793" ph="{...}" />
+            <marker date="1535362018390" expanded="true" signature="3113:4791" ph="{...}" />
+            <marker date="1535362018390" expanded="true" signature="3153:4775" ph="&lt;Modal/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3193:4754" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3244:4731" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3463:3750" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3545:3750" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3710:3750" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3742:3750" ph="&lt;i/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="4176:4502" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="4558:4704" ph="&lt;div/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/dashboard/aboutitem/aboutitem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -314,34 +426,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="151" column="32" lean-forward="false" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="1740">
+          <caret line="119" column="32" lean-forward="false" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+          <folding>
+            <marker date="1535362018390" expanded="true" signature="175:4793" ph="{...}" />
+            <marker date="1535362018390" expanded="true" signature="3113:4791" ph="{...}" />
+            <marker date="1535362018390" expanded="true" signature="3153:4775" ph="&lt;Modal/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3193:4754" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3244:4731" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3463:3750" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3545:3750" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3710:3750" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="3742:3750" ph="&lt;i/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="4176:4502" ph="&lt;div/&gt;" />
+            <marker date="1535362018390" expanded="true" signature="4558:4704" ph="&lt;div/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/dashboard/Checkout/checkout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+        <state relative-caret-position="2115">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/dashboard/aboutitem/aboutitem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="195">
           <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -350,9 +464,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        <state relative-caret-position="313">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/dashboard/sidenav/sidenav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
