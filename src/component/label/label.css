@@ -1,7 +1,37 @@
-res-label {
+.res-label {
     position: fixed;
-    right: 600px;
-    bottom: 500px;
-    height: 300px;
-    width: 500px;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    border-radius: 4px;
+    color: black;
+}
+
+.alert {
+    border: 2px solid #58B5B1;
+}
+/* Mobile first approach */
+@media all and (min-width: 540px) { 
+    .res-label {
+        width: 70%;
+    }
+}
+
+@media all and (min-width: 720px) {  
+    .res-label {
+        width: 40%;
+    }  
+}
+
+@media all and (min-width: 960px) { 
+    .res-label {
+        width: 40%;
+    }
+}
+
+@media all and (min-width: 1200px) { 
+    .res-label {
+        width: 30%;
+    }
 }

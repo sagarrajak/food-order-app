@@ -16,3 +16,9 @@ export const LABEL_SIGNUP_RESET = 'label_signup_reset';
 export const CART_DELETE_ITEM = 'delete_item_from_cart';
 export const CART_ADD_ITEM = 'add_item_in_cart';
 export const CART_ACTION_PROGRESS = 'cart_action_in_progress';
+export const CART_ACTION_INIT = 'cart_action_init';
+//Actions for showing alert 
+export const ALERT_DANGER = 'item_alert_danger';
+export const ALERT_INFO = 'item_alert_info';
+export const ALERT_SUCCESS = 'item_alert_success';
+export const ALERT_WARNING = 'item_alert_warning';

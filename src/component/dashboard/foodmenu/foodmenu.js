@@ -2,13 +2,13 @@ import React from 'react';
 import FoodCard from '../foodcard/foodcard';
 import  './foodmenu.css';
 import Spinner from '../../spinner/spinner'
-import config from '../../../axios.config';
-import axios from 'axios';
+import axios from '../../../axios.config';
 import { withRouter } from 'react-router-dom';
 import * as Api from '../../../api';
 import Container from '../../../hoc/container';
 import WhiteSpinner from '../../spinner/whiteSpinner';
 import { connect } from 'react-redux';
+import Label from '../../label/label';
 
 class FoodMenu extends React.Component {
     constructor(props) {
@@ -16,7 +16,6 @@ class FoodMenu extends React.Component {
         this.state = {
             foods: [],
             loading: 'true',
-
         }
     }
 
@@ -25,7 +24,7 @@ class FoodMenu extends React.Component {
             'color' : 'black',
         }
         let foodItems = this.state.foods.map((obj) => {
-            return < FoodCard  {...obj} key={obj._id}/>
+            return < FoodCard  {...obj} key={obj._id} foodCart={obj.cart} />
         });
 
         let inProgressSpinner = ( <div className='res_backdrop'>
@@ -42,29 +41,31 @@ class FoodMenu extends React.Component {
                         { foodItems }
                     </div>
                 </div>
+                <Label type="warning" message="dksdjksdjsdjhsdjh"/>
             </Container>
         );
     }
 
     componentDidMount() {
-        config.get(Api.FoodItems)
+        axios.get(Api.FoodItemsWithCart)
         .then((response) => {
-            console.log(response);
             if (response.status === 200) {
+                console.log(response);
                 this.setState({foods: response.data})
             }
             this.setState({loading: false})
         })
         .catch((e) => {
             this.setState({ loading: false });
-            console.log(e);
         }); 
     }
+
 }
 
 const mapStateToProps = state => {
     return  {
-        actionsInProgess: state.cart.actionsInProgress
+        actionsInProgess: state.cart.actionsInProgress,
+        cartItems: state.cart.cartItems||[]
     }
 }
 

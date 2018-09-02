@@ -1,6 +1,6 @@
 .res_food_block {
     width: 50%;
-    min-height: 200px;
+    min-height: 240px;
     display: flex;
     align-items: center;
     /* border: 1px solid black; */
@@ -10,7 +10,7 @@
 
 .res_card {
     background-color: #58B5B1;
-    height: 220px;
+    height: 100%;
     width: 100%;
     border-radius: 7px;
     display: flex;

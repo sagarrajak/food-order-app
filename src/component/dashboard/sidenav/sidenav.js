@@ -37,32 +37,32 @@ class Sidenav extends React.Component {
                                     </div>
                                 </li>
                                 <li className='nav-link'>
-                                     <NavLink to='/app'>some shit
+                                     <NavLink to='/app'>Veg
                                             <span><i class="fa fa-chevron-right" style={{'margin-left': '50px'}}></i></span>
                                      </NavLink>
                                 </li>
                                 <li className='nav-link'>
-                                        <NavLink to='/app'>some shit
+                                        <NavLink to='/app'>Non-veg
                                             <span><i class="fa fa-chevron-right" style={{'margin-left': '50px'}}></i></span>
                                         </NavLink>
                                 </li>
                                 <li className='nav-link'>
-                                        <NavLink to='/app'>some shit
+                                        <NavLink to='/app'>Breakfast
                                             <span><i class="fa fa-chevron-right" style={{'margin-left': '50px'}}></i></span>
                                         </NavLink>
                                 </li>
                                 <li className='nav-link'>
-                                        <NavLink to='/app'>some shit
+                                        <NavLink to='/app'>Drinks
                                             <span><i class="fa fa-chevron-right" style={{'margin-left': '50px'}}></i></span>
                                         </NavLink>
                                 </li>
                                 <li className='nav-link'>
-                                        <NavLink to='/app'>some shit
+                                        <NavLink to='/app'>Dinner 
                                             <span><i class="fa fa-chevron-right" style={{'margin-left': '50px'}}></i></span>
                                         </NavLink>
                                 </li>
                                 <li className='nav-link'>
-                                        <NavLink to='/app'>some shit
+                                        <NavLink to='/app'>Lunch
                                             <span><i class="fa fa-chevron-right" style={{'margin-left': '50px'}}></i></span>
                                         </NavLink>
                                 </li>
